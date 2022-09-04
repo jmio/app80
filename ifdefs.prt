@@ -1,0 +1,40 @@
+/*
+    注意：このファイルは自動生成されたものです
+*/
+
+/* 現在の ifdef 出力制御状態を得る */
+int output_enable(void) ;
+
+/* 内部シンボルを定義する */
+void sympush(char *cp) ;
+
+/* 内部シンボルテーブルのクリア : 後始末で call される */
+void symclear(void) ;
+
+/* _define の処理 */
+int eval_define(char *cp_buf) ;
+
+/* _ifdef の処理 */
+int eval_ifdef(char *cp_buf) ;
+
+/* _ifndef の処理 */
+int eval_ifndef(char *cp_buf) ;
+
+/* _elsedef の処理 */
+int eval_elsedef(char *cp_buf) ;
+
+/* _endifdef の処理 */
+int eval_endifdef(char *cp_buf) ;
+
+/* _include,_header の処理 */
+int eval_include(char *cp_buf) ;
+
+/* インクルードパスの追加 */
+int add_incpath(char *cp_path) ;
+
+/* インクルードパス領域の開放 */
+void clear_incpath(void) ;
+
+/* _warning の処理 */
+int eval_warning(char *cp_buf) ;
+

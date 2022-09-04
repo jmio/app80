@@ -1,0 +1,193 @@
+/*
+    注意：このファイルは自動生成されたものです
+*/
+
+/* 項の評価 */
+void expr_eval(char *cp_expr,char *cp_dist) ;
+
+/* ラベルの生成 */
+void label_output(char *cp) ;
+
+/* 無条件 JMP の出力 */
+void jmp_output(char *cp) ;
+
+/* 無条件 JMP の出力（SHORT） */
+void short_jmp_output(char *cp) ;
+
+/* 条件ＪＭＰの生成 95/06/21	*/
+void jflg_output(char *cp_flg, char *cp_label, int i_num) ;
+
+/* 条件ＪＭＰの生成 95/06/21	*/
+void jflg_output_n(char *cp_flg) ;
+
+/* 変数の保存(PUSH)出力 */
+void push_output(char *cp) ;
+
+/* 変数の保存(POP)出力 */
+void pop_output(char *cp) ;
+
+/* 95/07/08	*/
+void xchg_output(void) ;
+
+/*-----------------------------------------------------------------*/
+void _move_any_acc(int i_regs1,char *cp_1) ;
+
+/*-----------------------------------------------------------------*/
+void _move_acc_any(int i_regs2,char *cp_2) ;
+
+/* 95/07/07 左辺がバイトレジスタ、右辺がバイトレジスタ	*/
+void _move_bytereg_bytereg(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* 95/07/07 左辺がバイトレジスタ、右辺がバイトレジスタポインタ	*/
+void _move_bytereg_byteregptr(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* 95/07/07 左辺がバイトレジスタ、右辺がバイトポインタ	*/
+void _move_bytereg_byteptr(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* 95/07/07 左辺がバイトレジスタ、右辺が即値	*/
+void _move_bytereg_none(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* 95/07/07 左辺がバイトレジスタ	*/
+void _move_bytereg_any(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* 95/07/07 左辺がバイトポインタ	右辺がバイトレジスタ	*/
+void _move_byteptr_bytereg(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* 95/07/07 左辺がバイトポインタ	右辺がバイトレジスタポインタ	*/
+void _move_byteptr_byteregptr(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* 95/07/07 左辺がバイトポインタ	右辺がバイトポインタ	*/
+void _move_byteptr_byteptr(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* 95/07/07 左辺がバイトポインタ	右辺が即値	*/
+void _move_byteptr_none(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* 95/07/07 左辺がバイトポインタ	*/
+void _move_byteptr_any(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* 左辺がレジスタバイトポインタ	右辺がバイトレジスタ	*/
+void _move_byteregptr_bytereg(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* 左辺がレジスタバイトポインタ	右辺がバイトレジスタポインタ	*/
+void _move_byteregptr_byteregptr(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* 左辺がレジスタバイトポインタ	 右辺がバイトポインタ	*/
+void _move_byteregptr_byteptr(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* 左辺がレジスタバイトポインタ	95/07/07 右辺が即値	*/
+void _move_byteregptr_none(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* 左辺がレジスタバイトポインタ	*/
+void _move_byteregptr_any(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* 95/07/08  左辺がＨＬレジスタ 右辺がワードレジスタ	*/
+void _move_HLreg_wordreg(int i_regs2,char *cp_2) ;
+
+/* 95/07/08  左辺がＤＥレジスタ 右辺がワードレジスタ	*/
+void _move_DEreg_wordreg(int i_regs2,char *cp_2) ;
+
+/* 95/07/08  左辺がＢＣレジスタ 右辺がワードレジスタ	*/
+void _move_BCreg_wordreg(int i_regs2,char *cp_2) ;
+
+/* 95/07/07  左辺がワードレジスタ 右辺がワードレジスタ	*/
+void _move_wordreg_wordreg(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* 95/07/08  左辺がワードレジスタ  右辺がワードポインタ	*/
+void _move_wordreg_wordptr(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* 95/07/08  左辺がワードレジスタ	右辺がレジスタワードポインタ	*/
+void _move_wordreg_wordregptr(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* 95/07/08  左辺がワードレジスタ	右辺が即値	*/
+void _move_wordreg_none(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* 95/07/07  左辺がワードレジスタ	*/
+void _move_wordreg_any(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* 95/07/08 左辺がワードポインタ	右辺がワードレジスタ	*/
+void _move_wordptr_wordreg(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* 95/07/08 左辺がワードポインタ	右辺がレジスタワードポインタ	*/
+void _move_wordptr_wordregptr(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* 95/07/08 左辺がワードポインタ	*/
+void _move_wordptr_any(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* 95/07/08 左辺がレジスタワードポインタ	右辺がワードレジスタ	*/
+void _move_wordregptr_wordreg(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* 95/07/08 左辺がレジスタワードポインタ	右辺が即値	*/
+void _move_wordregptr_none(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* 95/07/08 左辺がレジスタワードポインタ	*/
+void _move_wordregptr_any(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* 95/07/07	*/
+void _move_any_any(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* cp_2 から cp_1 へ、データ転送するニーモニック */
+void mov_output(char *cp_1,char *cp_2) ;
+
+/* 関数の戻り値代入 MOV 出力（評価前） */
+void retval_output(char *cp1) ;
+
+/* LEA の出力（評価前） */
+void lea_output(char *cp1,char *cp2) ;
+
+/* サブルーチン CALL の出力 */
+void call_output(char *cp) ;
+
+/* サブルーチン RET の出力 */
+void ret_output(void) ;
+
+/* 割り込み IRET の出力 */
+void iret_output(void) ;
+
+/* PUBLIC 宣言 */
+void public_output(char *cp) ;
+
+/* EXTERNAL 宣言 */
+void extern_output(char *cp) ;
+
+/* 変数の加算出力 */
+void add_output(char *cp1,char *cp2) ;
+
+/* 変数の減算出力 */
+void sub_output(char *cp1,char *cp2) ;
+
+/*-----------------------------------------------------------------*/
+void inc_bytereg(char *cp) ;
+
+/*-----------------------------------------------------------------*/
+void inc_wordreg(int i_regs,char *cp) ;
+
+/*-----------------------------------------------------------------*/
+void inc_byteptr(int i_regs,char *cp) ;
+
+/*-----------------------------------------------------------------*/
+void inc_byteregptr(int i_regs,char *cp) ;
+
+/* 変数のインクリメント出力（評価ずみ） */
+void inc_output(char *cp) ;
+
+/*-----------------------------------------------------------------*/
+void dec_bytereg(char *cp) ;
+
+/*-----------------------------------------------------------------*/
+void dec_wordreg(int i_regs,char *cp) ;
+
+/*-----------------------------------------------------------------*/
+void dec_byteregptr(int i_regs,char *cp) ;
+
+/* 変数のデクリメント出力（評価ずみ） */
+void dec_output(char *cp) ;
+
+/*-----------------------------------------------------------------*/
+void loop80_output(char *cp_1,char *cp_label,int i_num) ;
+
+/* 95/06/23 dr <= sr	*/
+void move_bytereg_to_bytereg(char *cp_sr,char *cp_dr) ;
+
+/* 95/06/23	*/
+void move_2bytereg_to_2bytereg(char *cp_sh,char *cp_sl,char *cp_dh,char *cp_dl) ;
+

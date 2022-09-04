@@ -1,0 +1,23 @@
+/*
+    注意：このファイルは自動生成されたものです
+*/
+
+/* バイトレジスタかどうか調べる */
+int is_reg(char *cp) ;
+
+/* レジスタポインタか？ */
+int is_regptr(char *cp) ;
+
+/* (byte),(word) キーワードの検査
+   (byte) ... "(byte)"文字列を削除して 1 を返す
+   (word) ... "(word)"文字列を削除して 2 を返す
+   どちらも見つからない時 0 を返す   
+*/
+int cast_eval(char *cp) ;
+
+/* ++,-- キーワードの検査 */
+int incdec_eval(char *cp_ptr,char *cp_var,char *cp_incdec,void (*outfunc)()) ;
+
+/* += , -= キーワードの検査 */
+int addsub_eval(char *cp_ptr,char *cp_var,char *cp_addsub,void (*outfunc)()) ;
+

@@ -1,0 +1,17 @@
+/*
+    注意：このファイルは自動生成されたものです
+*/
+
+/* カンマで区切られた文字列から、char *[] 型配列を作成して返す
+   （但し、文字列ポインタ配列のサイズは固定長） */
+int strtocpa(char *cp,char ***cpp_list,int i_maxlen,char *cp_delim) ;
+
+/* char *[] 型引数リストの表示（主にデバッグ用） */
+void cpa_print(char *cpa_list[]) ;
+
+/* char *[] 型引数リスト（自分自身、及び配列要素）の開放 */
+void cpa_release(char *cpa_list[]) ;
+
+/* char *[] 型引数リストの内容の同一性チェック */
+int cpa_equalp(char *cpa_list1[],char *cpa_list2[]) ;
+

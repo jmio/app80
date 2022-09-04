@@ -1,0 +1,43 @@
+/*
+    注意：このファイルは自動生成されたものです
+*/
+
+/* _function の処理 */
+int eval_function(char *cp_line) ;
+
+/* _procedure の処理 */
+int eval_procedure(char *cp_line) ;
+
+/* _function_h の処理 */
+int eval_function_h(char *cp_line) ;
+
+/* _procedure_h の処理 */
+int eval_procedure_h(char *cp_line) ;
+
+/* _endf の処理 */
+int eval_endf(char *cp_line) ;
+
+/* _endp の処理 */
+int eval_endp(char *cp_line) ;
+
+/* _endpi の処理 */
+int eval_endpi(char *cp_line) ;
+
+/* _func の処理 */
+int eval_func(char *cp_line) ;
+
+/* _proc の処理 */
+int eval_proc(char *cp_line) ;
+
+/* _return の処理 */
+int eval_return(char *cp_line) ;
+
+/* _public の処理 */
+int eval_public(char *cp_line) ;
+
+/* _extrn の処理 */
+int eval_extrn(char *cp_line) ;
+
+/* 完了処理 */
+int exit_function(void) ;
+

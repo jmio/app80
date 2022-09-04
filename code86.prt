@@ -1,0 +1,76 @@
+/*
+    注意：このファイルは自動生成されたものです
+*/
+
+/* バイト・ワードキーワードチェック */
+void bwcast_eval (char *cp_expr,char *cp_dist) ;
+
+/* 項の評価 */
+void expr_eval(char *cp_expr,char *cp_dist) ;
+
+/* ラベルの生成 */
+void label_output(char *cp) ;
+
+/* MOV の出力（評価前） */
+void mov_output(char *cp1,char *cp2) ;
+
+/* LEA の出力（評価前） */
+void lea_output(char *cp1,char *cp2) ;
+
+/* 関数の戻り値代入 MOV 出力（評価前） */
+void retval_output(char *cp1) ;
+
+/* CMP の出力（評価前） */
+void cmp_output(char *cp1,char *cp2) ;
+
+/* AND の出力（評価前） */
+void and_output(char *cp1,char *cp2) ;
+
+/* TEST の出力（評価前） */
+void test_output(char *cp1,char *cp2) ;
+
+/* 無条件 JMP の出力 */
+void jmp_output(char *cp) ;
+
+/* 無条件 JMP の出力（SHORT） */
+void short_jmp_output(char *cp) ;
+
+/* JCXZ の出力 */
+void jcxz_output(char *cp) ;
+
+/* LOOP の出力 */
+void loop_output(char *cp) ;
+
+/* サブルーチン CALL の出力 */
+void call_output(char *cp) ;
+
+/* サブルーチン RET の出力 */
+void ret_output(void) ;
+
+/* 割り込み IRET の出力 */
+void iret_output(void) ;
+
+/* 変数の保存(PUSH)出力 */
+void push_output(char *cp) ;
+
+/* 変数の保存(POP)出力 */
+void pop_output(char *cp) ;
+
+/* 変数のインクリメント出力（評価ずみ） */
+void inc_output(char *cp) ;
+
+/* 変数のデクリメント出力（評価ずみ） */
+void dec_output(char *cp) ;
+
+/* 変数の加算出力 */
+void add_output(char *cp1,char *cp2) ;
+
+/* 変数の減算出力 */
+void sub_output(char *cp1,char *cp2) ;
+
+/* PUBLIC 宣言 */
+void public_output(char *cp) ;
+
+/* EXTERNAL 宣言 */
+void extern_output(char *cp) ;
+

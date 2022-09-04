@@ -1,0 +1,10 @@
+/*
+    注意：このファイルは自動生成されたものです
+*/
+
+/* メインルーチン */
+int main(int argc,char **argv) ;
+
+/* コマンドライン・パラメータの解釈 */
+int getparam(int argc,char **argv,char **cpp,char **cpp_o,int *i_opc) ;
+

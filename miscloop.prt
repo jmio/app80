@@ -1,0 +1,34 @@
+/*
+    注意：このファイルは自動生成されたものです
+*/
+
+/* _while の処理 */
+int eval_while(char *cp_line) ;
+
+/* _wend の処理 */
+int eval_wend(char *cp_line) ;
+
+/* _repeat の処理 */
+int eval_repeat(char *cp_line) ;
+
+/* _until の処理 */
+int eval_until(char *cp_line) ;
+
+/* _continue の処理 */
+int eval_continue(char *cp_line) ;
+
+/* _exit の処理 */
+int eval_exit(char *cp_line) ;
+
+/* _let の処理 (_for の第一パラメータも) */
+int eval_let(char *cp_line) ;
+
+/* _for の処理 */
+int eval_for(char *cp_line) ;
+
+/* _next の処理 */
+int eval_next(char *cp_line) ;
+
+/* 今 loop ブロックの中か ? */
+int in_loopblkp(void) ;
+

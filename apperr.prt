@@ -1,0 +1,10 @@
+/*
+    注意：このファイルは自動生成されたものです
+*/
+
+/* エラー処理 */
+void app_error(int i_errcode,int i_isfatal) ;
+
+/* ワーニング処理 */
+void app_warning(char *cp) ;
+

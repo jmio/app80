@@ -1,0 +1,94 @@
+/*
+    注意：このファイルは自動生成されたものです
+*/
+
+/* 条件ジャンプ出力 */
+void jcc_output(char *cp_s,char *cp_n,char *cp_label,int i_num) ;
+
+/* 引数 の 種類 を 調べる */
+void __chk_bw(char *cp,int *ip_type,int *ip_regs) ;
+
+/*-----------------------------------------------------------------*/
+void _cmp_acc_any(int i_regs2,char *cp_2) ;
+
+/*-----------------------------------------------------------------*/
+int _cmp_any_bytereg(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/*-----------------------------------------------------------------*/
+int _cmp_any_byteptr(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/*-----------------------------------------------------------------*/
+int _cmp_any_none(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/* cp_1 と cp_2 を 比較したニーモニックを生成する。 */
+int _cmp(char *cp1,char *cp2) ;
+
+/*-----------------------------------------------------------------*/
+int _and_acc_any(int i_regs2,char *cp_2) ;
+
+/*-----------------------------------------------------------------*/
+int _and_any_bytereg(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/*-----------------------------------------------------------------*/
+int _and_any_byteptr(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/*-----------------------------------------------------------------*/
+int _and_any_byteregptr(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/*-----------------------------------------------------------------*/
+int _and_any_none(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/*-----------------------------------------------------------------*/
+int _and(char *cp1,char *cp2) ;
+
+/*-----------------------------------------------------------------*/
+int _test_acc_any(int i_regs2,char *cp_2) ;
+
+/*-----------------------------------------------------------------*/
+int _test_any_bytereg(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/*-----------------------------------------------------------------*/
+int _test_any_byteptr(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/*-----------------------------------------------------------------*/
+int _test_any_byteregptr(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/*-----------------------------------------------------------------*/
+int _test_any_none(int i_regs1,int i_regs2,char *cp_1,char *cp_2) ;
+
+/*-----------------------------------------------------------------*/
+int _test(char *cp1,char *cp2) ;
+
+/* cp_1 と cp_2 を 比較した後、equal 条件でジャンプするニーモニック */
+void cond_equal(char *cp_1,char *cp_2,char *cp_label,int i_num) ;
+
+/* cp_1 と cp_2 を 比較した後、not equal 条件でジャンプするコード */
+void cond_not_e(char *cp_1,char *cp_2,char *cp_label,int i_num) ;
+
+/* cp_1 と cp_2 を 比較した後、below 条件でジャンプするコード */
+void cond_below(char *cp_1,char *cp_2,char *cp_label,int i_num) ;
+
+/* cp_1 と cp_2 を 比較した後、below or equal 条件でジャンプするコード */
+void cond_b_or_e(char *cp_1,char *cp_2,char *cp_label,int i_num) ;
+
+/* cp_1 と cp_2 を 比較した後、above 条件でジャンプするコード */
+void cond_above(char *cp_1,char *cp_2,char *cp_label,int i_num) ;
+
+/* cp_1 と cp_2 を 比較した後、above or equal 条件でジャンプするコード */
+void cond_a_or_e(char *cp_1,char *cp_2,char *cp_label,int i_num) ;
+
+/* cp_1 と cp_2 を test した後、zero 条件でジャンプするコード */
+void cond_test(char *cp_1,char *cp_2,char *cp_label,int i_num) ;
+
+/* cp_1 と cp_2 を test した後、not zero 条件でジャンプするコード */
+void cond_not_t(char *cp_1,char *cp_2,char *cp_label,int i_num) ;
+
+/* cp_1 と cp_2 を and した後、zero 条件でジャンプするコード */
+void cond_and(char *cp_1,char *cp_2,char *cp_label,int i_num) ;
+
+/* cp_1 と cp_2 を and した後、not zero 条件でジャンプするコード */
+void cond_not_a(char *cp_1,char *cp_2,char *cp_label,int i_num) ;
+
+/* フラグによるジャンプ */
+void cond_flags(char *cp_1,int i_tf,char *cp_label,int i_num) ;
+

@@ -1,0 +1,19 @@
+/*
+    注意：このファイルは自動生成されたものです
+*/
+
+/* トップファイルの評価 */
+int eval_file (char *cp_fname,int i_paramcount,char **cpp_paramstr) ;
+
+/* 開始処理 */
+int eval_begin(int i_paramcount,char **cpp_paramstr) ;
+
+/* エラー発生時の終了前処理 (APPERR.C からコールされる) */
+int eval_errexit(int i_errcode) ;
+
+/* 通常の終了前処理 */
+int eval_normalexit() ;
+
+/* 行の評価  eval_line */
+int eval_line(char *cp_line) ;
+

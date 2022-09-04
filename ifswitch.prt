@@ -1,0 +1,28 @@
+/*
+    注意：このファイルは自動生成されたものです
+*/
+
+/* _if の処理 */
+int eval_if(char *cp_line) ;
+
+/* _else の処理 */
+int eval_else(char *cp_line) ;
+
+/* _endif の処理 */
+int eval_endif(char *cp_line) ;
+
+/* _switch の処理 */
+int eval_switch(char *cp_line) ;
+
+/* _case の処理 */
+int eval_case(char *cp_line) ;
+
+/* _default の処理 */
+int eval_default(char *cp_line) ;
+
+/* _endsw の処理 */
+int eval_endsw(char *cp_line) ;
+
+/* 今 if ブロックの中か ? */
+int in_ifblkp(void) ;
+

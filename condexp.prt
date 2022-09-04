@@ -1,0 +1,18 @@
+/*
+    注意：このファイルは自動生成されたものです
+*/
+
+/* 条件文字列の分割 */
+char *get_args(char *cp_line,
+               char *cp_arg1,char *cp_cond,char *cp_arg2,char *cp_rest) ;
+
+/* 条件ジャンプ生成処理 */
+void eval_cond(char *cp_line,int i_revf,char *cp_label,
+               int i_num,int i_level,int i_lpf) ;
+
+/* 無条件ジャンプの出力 */
+void ncjmp_output(char *cp_lstr,int i_num) ;
+
+/* テンポラリ・ラベルの生成 */
+void tmplabel_output(char *cp_lstr,int i_num) ;
+

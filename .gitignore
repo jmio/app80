@@ -1,0 +1,11 @@
+*.db
+*.log
+*.bit
+*.area
+*.bid
+*.bak
+*.o
+*.elf
+*.lst
+*.lib
+*.bak

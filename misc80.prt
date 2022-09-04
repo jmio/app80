@@ -1,0 +1,19 @@
+/*
+    注意：このファイルは自動生成されたものです
+*/
+
+/* _near の処理 */
+int eval_near(char *cp_line) ;
+
+/* _short の処理 */
+int eval_short(char *cp_line) ;
+
+/* ＣＰＵタイプの指定 */
+int eval_cpu(char *cp_line) ;
+
+/* _loop の処理 */
+int eval_loop(char *cp_line) ;
+
+/* _endl の処理 */
+int eval_endl(char *cp_line) ;
+

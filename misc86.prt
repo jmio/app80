@@ -1,0 +1,22 @@
+/*
+    注意：このファイルは自動生成されたものです
+*/
+
+/* _near の処理 */
+int eval_near(char *cp_line) ;
+
+/* _short の処理 */
+int eval_short(char *cp_line) ;
+
+/* _signed の処理 */
+int eval_signed(char *cp_line) ;
+
+/* _short の処理 */
+int eval_unsigned(char *cp_line) ;
+
+/* _loopcx の処理 */
+int eval_loopcx(char *cp_line) ;
+
+/* _endl の処理 */
+int eval_endl(char *cp_line) ;
+

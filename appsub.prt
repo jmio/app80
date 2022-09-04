@@ -1,0 +1,81 @@
+/*
+    注意：このファイルは自動生成されたものです
+*/
+
+/* メモリ残量 */
+long app_avmem(void) ;
+
+/* メモリの確保 */
+void *app_malloc(size_t st) ;
+
+/* メモリの開放 */
+void app_free(void *vp) ;
+
+/* 新たに確保したメモリに文字列をコピー : 可変長バッファ */
+char *app_strdup(char *cp_orig) ;
+
+/* 新たに確保したメモリに文字列をコピー : 固定長バッファ */
+char *app_strdup2(char *cp_orig,size_t s) ;
+
+/* ファイルのオープン */
+FILE *open_file(const char *cp_fname,const char *cp_mode) ;
+
+/* ファイルからの１行先読み */
+int prefetch_line(char *cp_buf) ;
+
+/* ファイルのインクルード */
+int include_file(char *cp_fname) ;
+
+/* 出力ファイルに文字列を書き込む */
+void app_outstr(char *cp_outstr) ;
+
+/* 出力ファイルに printf 形式で書きこむ */
+void app_printf(char *cp_format , ...) ;
+
+/* 自分自身のファイル名を得る */
+void get_ownname(char *cp) ;
+
+/* 自分自身のファイル名を得る */
+void get_ownbasename(char *cp) ;
+
+/* ヌルポインタ、ヌル文字列チェック */
+int app_strlen(char *cp) ;
+
+/* cp_line から cp_white を読み飛ばし、cp_delim のなかの１文字がみつかるまで
+   切り出して cp_dist に copy                         */
+char* gettoken(char *cp_line,
+               char *cp_white,         /* 読み飛ばすキャラクタ群 */
+               char *cp_delim,         /* デリミタキャラクタ群 */
+               char *cp_dist) ;
+
+/* cp_line から cp_delim のなかの１文字以外がみつかるまで
+   切り出して cp_dist に copy          ~~~~               */
+char* gettoken2(char *cp_line,char *cp_white,char *cp_delim,char *cp_dist) ;
+
+/* _ ではじまる APP 予約語候補の切り出し */
+char *get_appresw(char *cp_line,char *ca_resw) ;
+
+/* 文字列の前後についているごみを取り除く */
+void cutspcs(char *cp_buf,const char *cp_spcs) ;
+
+/* cp_line 中に 特定キャラクタが含まれるかどうかを探索
+   （クオート処理込み）*/
+char* app_strchr(char *cp_line,int i_char,int i_delim) ;
+
+/* 文字列が数値かどうか調べる (数字なら TRUE を返す) */
+int app_isnum(char *cp) ;
+
+/* 文字列テーブルをサーチし、エントリ番号を返す */
+int app_scantbl(char **cpp_table,char *cp) ;
+
+/* テーブル中の文字列が含まれるかどうかをサーチし、エントリ番号を返す
+                                                 （文字列カットつき） */
+int app_scantbl_with_cut(char **cpp_table,char *cp) ;
+
+/* 文字列 cp_t 内で cp_s1 と一致する文字列全てを cp_s2 に置換する
+   （但し cp_t から始まる領域は十分大きいこと） */
+int str_replace(char *cp_t,char *cp_s1,char *cp_s2) ;
+
+/* パス名からドットの位置を探す */
+char *getdotpos(char *cp) ;
+
