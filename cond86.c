@@ -127,4 +127,3 @@ void cond_flags(char *cp_1,int i_tf,char *cp_label,int i_num)
 {
    app_printf("\t%s%s\t%s_%d\n",(i_tf?"J":"JN"),cp_1,cp_label,i_num) ;
 }
-

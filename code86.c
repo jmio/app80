@@ -269,4 +269,3 @@ void extern_output(char *cp)
 {
    app_printf("\tEXTRN\t%s:NEAR\n",cp) ;
 }
-

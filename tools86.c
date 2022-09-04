@@ -124,4 +124,3 @@ int addsub_eval(char *cp_ptr,char *cp_var,char *cp_addsub,void (*outfunc)())
 
    return 0 ;
 }
-

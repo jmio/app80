@@ -122,4 +122,3 @@ int eval_endl(char *cp_line)
 
    return 0 ;
 }
-

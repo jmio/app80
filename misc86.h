@@ -14,4 +14,3 @@
 #include "misc86.prt"
 
 #endif /* of MISC86_H */
-

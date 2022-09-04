@@ -11,9 +11,8 @@
 #ifndef COND86_H
 #define COND86_H
 
-#define TMPL_NEAR    TMPL_HEAD##"SKP"     /* near ジャンプ生成用ラベル */
+#define TMPL_NEAR    "$_NEAR"     /* near ジャンプ生成用ラベル */
 
 #include "cond86.prt"
 
 #endif /* of COND86_H */
-

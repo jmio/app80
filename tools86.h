@@ -41,4 +41,3 @@
 #include "tools86.prt"
 
 #endif /* of TOOLS86_H */
-

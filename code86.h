@@ -16,4 +16,3 @@
 #include "code86.prt"
 
 #endif /* of CODE86_H */
-
