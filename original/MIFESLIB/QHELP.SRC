@@ -1,0 +1,169 @@
+*qhelp ＡＰＰ予約語簡易入力
+	setmenu(0,"ＡＰＰ予約語メニュー")
+	setmenu(1,"構造化命令（条件分岐）")
+	setmenu(2,"構造化命令（ループ）")
+	setmenu(3,"サブルーチン")
+	setmenu(4,"条件式")
+	setmenu(5,"その他")
+	@5 = selmenu(5,30)
+	switch	@5
+	case 1
+		goto	:struc1
+	case 2
+		goto	:struc2
+	case 3
+		goto	:subr
+	case 4
+		goto	:cond
+	case 5
+		goto	:misc
+	default
+		exitm()
+	endsw
+;
+:struc1
+	setmenu(0,"ＡＰＰ構造化命令　その１")
+	setmenu(1,"_if 条件")
+	setmenu(2,"_else")
+	setmenu(3,"_endif")
+	setmenu(4,"_switch")
+	setmenu(5,"_case 条件")
+	setmenu(6,"_default")
+	setmenu(7,"_endsw")
+	@5 = selmenu(7,30)
+	switch	@5
+	case 1
+		{_if}
+	case 2
+		{_else}
+	case 3
+		{_endif}
+	case 4
+		{_switch}
+	case 5
+		{_case}
+	case 6
+		{_default}
+	case 7
+		{_endsw}
+	endsw
+	exitm()
+;
+:struc2
+	setmenu(0,"ＡＰＰ構造化命令　その２")
+	setmenu(1,"_while   継続条件")
+	setmenu(2,"_wend")
+	setmenu(3,"_repeat")
+	setmenu(4,"_until   終了条件")
+	setmenu(5,"_for     変数=初期値,終了条件,増／減")
+	setmenu(6,"_next")
+	setmenu(7,"_loopcx  CXの初期値")
+	setmenu(8,"_endl")
+	setmenu(9,"_continue")
+	setmenu(10,"_exit")
+	@5 = selmenu(10,40)
+	switch	@5
+	case 1
+		{_while}
+	case 2
+		{_wend}
+	case 3
+		{_repeat}
+	case 4
+		{_until}
+	case 5
+		{_for}
+	case 6
+		{_next}
+	case 7
+		{_loopcx}
+	case 8
+		{_endl}
+	case 9
+		{_continue}
+	case 10
+		{_exit}
+	endsw
+	exitm()
+;
+:subr
+	setmenu(0,"ＡＰＰサブルーチン")
+	setmenu(1,"_procedure  NAME (引数リスト):保護情報")
+	setmenu(2,"_function   NAME (引数リスト):保護情報")
+	setmenu(3,"_return     戻り値")
+	setmenu(4,"_proc       NAME (引数リスト):保護情報")
+	setmenu(5,"変数 =_func NAME (引数リスト):保護情報")
+	@5 = selmenu(5,60)
+	switch	@5
+	case 1
+		{_procedure}
+	case 2
+		{_function}
+	case 3
+		{_return}
+	case 4
+		{_proc}
+	case 5
+		{_func}
+	endsw
+	exitm()
+;
+:cond
+	setmenu(0,"ＡＰＰ条件式")
+	setmenu(1,"== 等しい (=  も可)")
+	setmenu(2,"!= 異なる (<> も可)")
+	setmenu(3,"<  より小さい")
+	setmenu(4,">  より大きい")
+	setmenu(5,"<= 以下")
+	setmenu(6,">= 以上")
+	setmenu(7,"&  ビットテスト (ON)")
+	setmenu(8,"^& ビットテスト (OFF)")
+	setmenu(9,"|| ｏｒ　（又は）")
+	setmenu(10,"&& ａｎｄ　（かつ）")
+	@5 = selmenu(10,30)
+	switch	@5
+	case 1
+		{==}
+	case 2
+		{!=}
+	case 3
+		{<}
+	case 4
+		{>}
+	case 5
+		{<=}
+	case 6
+		{>=}
+	case 7
+		{&}
+	case 8
+		{~&}
+	case 9
+		{||}
+	case 10
+		{&&}
+	endsw
+	exitm()
+;
+:misc
+	setmenu(0,"ＡＰＰ予約語　その他")
+	setmenu(1,"_include ファイル名")
+	setmenu(2,"_near")
+	setmenu(3,"_short")
+	setmenu(4,"_extrn")
+	setmenu(5,"_public")
+	@5 = selmenu(5,30)
+	switch	@5
+	case 1
+		{_include}
+	case 2
+		{_near}
+	case 3
+		{_short}
+	case 4
+		{_extrn}
+	case 5
+		{_public}
+	endsw
+	exitm()
+

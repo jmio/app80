@@ -1,0 +1,115 @@
+*compile  現テキストのコンパイル／アセンブル
+	@7-- = pathname(1,30)	;現テキストのパス名を得る
+	if @str1[@7] == 'C' && @str1[@7-1] == '.' 	;拡張子のチェック
+		goto :tcc
+	endif
+	if @str1[@7]=='P' && @str1[@7-1]=='P' && @str1[@7-2]=='C' && @str1[@7-3]=='.'
+		goto :tcc
+	endif
+	if @str1[@7]=='N' && @str1[@7-1]=='C' && @str1[@7-2]=='I' && @str1[@7-3]=='.'
+		goto :icon
+	endif
+	if @str1[@7]=='M' && @str1[@7-1]=='S' && @str1[@7-2]=='A' && @str1[@7-3]=='.'
+		goto :tasm
+	endif
+	if @str1[@7]=='S' && @str1[@7-1]=='A' && @str1[@7-2]=='P' && @str1[@7-3]=='.'
+		goto :tpc
+	endif
+	if @str1[@7]=='P' && @str1[@7-1]=='P' && @str1[@7-2]=='A' && @str1[@7-3]=='.'
+		goto :app
+	endif
+	message("拡張子が不当です!!")
+	exitm()
+; Ｃ、Ｃ＋＋ コンパイル
+:tcc
+	gosub	:errclose
+	strcpy(1,"tcc.exe ")
+	if (@7=xchild(1,"%err")) == 0xffff
+		message("TCC.EXEが実行できませんでした")
+		exitm()		;マクロを終了
+	endif
+	open("%err")
+	exit()		;マクロ終了
+; Ｉｃｏｎ　Ｌａｎｇｕａｇｅ
+:icon
+	gosub	:errclose
+	strcpy(1,"icont.exe  -x")
+	if (@7=xchild(1,"%err")) == 0xffff
+		message("ICONT.EXEが実行できませんでした")
+		exitm()		;マクロを終了
+	endif
+	open("%err")
+	exit()		;マクロ終了
+;  アセンブル
+:tasm
+	gosub	:errclose
+	strcpy(1,"tasm.exe ;")	;現テキストのアセンブル(MASM)
+	if (@7=xchild(1,"%err")) == 0xffff
+		message("TASM.EXEが実行できませんでした")
+		exitm()		;マクロを終了
+	endif
+	open("%err")
+	exit()		;マクロ終了
+;  Ｐａｓｃａｌ コンパイル
+:tpc
+	gosub	:errclose
+	strcpy(1,"tpc.exe ")
+	if (@7=xchild(1,"%err")) == 0xffff
+		message("TPC.EXEが実行できませんでした")
+		exitm()		;マクロを終了
+	endif
+	open("%err")
+	exit()		;マクロ終了
+;  ＡＰＰ
+:app
+	setmenu(0,"ＡＰＰメニュー")
+	setmenu(1,"通常変換 (to .ASM)")
+	setmenu(2,"疑似２パス変換      -2")
+	setmenu(3,"TP6 ASM 対応変換    -P")
+	setmenu(4,"疑似２パス変換(TP6) -P2")
+	setmenu(5,"ヘッダファイル作成  -H")
+	@5 = selmenu(5,30)
+	switch	@5
+	case 1
+		strcpy(1,"app.exe ")
+		break
+	case 2
+		strcpy(1,"app.exe -2 ")
+		break
+	case 3
+		strcpy(1,"app.exe -P ")
+		break
+	case 4
+		strcpy(1,"app.exe -P2 ")
+		break
+	case 5
+		strcpy(1,"app.exe -H ")
+		break
+	default
+		exitm()
+	endsw
+	gosub	:errclose
+	if (@7=xchild(1,"%err")) == 0xffff
+		message("APP.EXEが実行できませんでした")
+		exitm()		;マクロを終了（次のキー入力時にメッセージ消去）
+	endif
+	open("%err")
+	exit()		;マクロ終了
+;  エラー・ファイル"%err"をクローズする
+:errclose
+	@7 = text(30)&0xff		;現テキストのテキスト番号を得る
+	if (@8=text("%err")) < 15	;ファイル"%err"をチェック
+	;テキスト"%err"をクローズする
+		select(@8)		;テキスト"%err"に移る
+		if text(@8)&0x4000
+			#86{Y}		;テキスト"%err"をクローズ（変更あり）
+		else
+			#86		;テキスト"%err"をクローズ（変更なし）
+		endif
+		select(@7)		;元のテキストに戻る
+	endif
+	message("現テキストをセーブ中です")
+	#85			;現テキストのセーブ
+	clsmess()
+	return			;サブルーチン終了
+
